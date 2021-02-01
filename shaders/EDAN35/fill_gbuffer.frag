@@ -27,11 +27,6 @@ layout (location = 0) out vec4 geometry_diffuse;
 layout (location = 1) out vec4 geometry_specular;
 layout (location = 2) out vec4 geometry_normal;
 
-float lineariseDepth(float value)
-{
-	return (2.0 * near) / (far + near - value * (far - near));
-}
-
 void main()
 {
 	if (has_opacity_texture && texture(opacity_texture, fs_in.texcoord).r < 1.0)
@@ -46,8 +41,6 @@ void main()
 	geometry_specular = vec4(0.0f);
 	if (has_specular_texture)
 		geometry_specular = texture(specular_texture, fs_in.texcoord);
-	//float lin_depth = lineariseDepth(texture(depth_texture, fs_in.texcoord).r);
-	//geometry_specular = vec4(lin_depth, lin_depth, lin_depth, 1.0);
 
 	// World space normal
 	if (has_normals_texture) {
