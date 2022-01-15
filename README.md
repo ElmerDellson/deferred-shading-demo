@@ -1,10 +1,10 @@
 # Deferred Shading Demo with SSAO and DOF
 
+This is a partially compiled version of the project, full source code can be found here: https://github.com/ElmerDellson/deferred-shading-full
+
 A demo of deferred shading, Screen Space Ambient Occlusion and Depth Of Field. Originally made as a project in the course EDAN35 High Performance Computer Graphics at LTH. accumulate_lights, DOF_shader, SSAO_shader, SSAO_blur_shader, fill_gbuffer and parts of resolve deferred were implemented by me (and my project partner).
 
 A video demonstrating the major features can be seen here: https://www.youtube.com/watch?v=eQC-1Hqubd8&ab_channel=ElmerDellson
-
-Full source code for this project can be found here: https://github.com/ElmerDellson/deferred-shading-full
 
 # Controls
 Move with WASD, look around by clicking and dragging with the mouse.
